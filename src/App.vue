@@ -16,7 +16,7 @@ better visual
     <br />
     <!-- search input box that changes search variable value -->
     <md-input type="text" placeholder="Search Pokemon" v-model="search" />
-   <!-- Button to call search function -->
+    <!-- Button to call search function -->
     <button @click="searchF">Search</button>
     <!-- cicle for to generate all cards based on the pokemon array -->
     <div
@@ -24,7 +24,7 @@ better visual
       :key="poke.url"
       class="columns"
     >
-    <!-- Call for Pokemon component passing values given by the API-->
+      <!-- Call for Pokemon component passing values given by the API-->
       <Pokemon :name="poke.name" :url="poke.url" :num="index + 1" />
     </div>
     <hr />
@@ -58,8 +58,8 @@ export default {
       /* populating the array with API results */
       this.pokemons = res.data.results;
       /* debuging */
-     /*  console.log(this.pokemons); */
-     /* populating search array */
+      /*  console.log(this.pokemons); */
+      /* populating search array */
       this.filteredPokemons = this.pokemons;
     });
   },
@@ -81,7 +81,7 @@ export default {
       }
     },
   },
-  /* Function to intant search on development*/
+  /* Function to intant search on development */
   computed: {
     /*  searchResults: function(){
       if(this.search == ""){
